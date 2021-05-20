@@ -17,7 +17,8 @@
         "sqlite3": "^5.0.2"
     },
     "scripts": {
-        "start": "cds run"
+        "start": "cds run",
+        "build:mta": "cds build/all && mbt build -p=cf"
     },
     "eslintConfig": {
         "extends": "eslint:recommended",

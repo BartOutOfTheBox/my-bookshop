@@ -17,6 +17,23 @@ build-parameters:
       - npx -p @sap/cds-dk cds build --production
 
 modules:
+ # ------------------------ UI MODULE -------------------------
+ - name: my-bookshop-ui
+ # ------------------------------------------------------------
+   type: nodejs
+   path: app
+   parameters:
+    memory: 256M
+    disk-quota: 256M
+   requires:
+    - name: srv-api
+      group: destinations
+      properties:
+        forwardAuthToken: true
+        strictSSL: true
+        name: srv-api
+        url: ~{srv-url}
+
  # --------------------- SERVER MODULE ------------------------
  - name: my-bookshop-srv
  # ------------------------------------------------------------

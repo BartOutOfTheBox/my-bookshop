@@ -1,0 +1,12 @@
+{
+    "name": "my-bookshop-ui",
+    "dependencies": {
+        "@sap/approuter": "*"
+    },
+    "engines": {
+        "node": "14.16.x"
+    },
+    "scripts": {
+        "start": "node node_modules/@sap/approuter/approuter.js"
+    }
+}
